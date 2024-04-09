@@ -21,7 +21,8 @@ export const Header = ()=>{
         headerDesc:string,
         instrumentImg:string,
         rotateInstrumentImg:boolean,
-        instrumentImgWidth?:number
+        instrumentImgWidth?:number,
+        section:string
     }
     const slides:slideType[] = [
         {
@@ -29,27 +30,31 @@ export const Header = ()=>{
             headerDesc:"Electric guitars aren't just instruments, they're voices. Find yours and let it scream.",
             instrumentImg:fenderElectricGuitar,
             rotateInstrumentImg:true,
-            instrumentImgWidth:170
+            instrumentImgWidth:170,
+            section:'Electric Guitars'
         },
         {
             headerBgURL: headerBg1,
             headerDesc:"A great bassist is the foundation of a rock band. They're the bedrock that allows the melodies and rhythms to soar.",
             instrumentImg:fenderBassGuitar,
             rotateInstrumentImg:true,
-            instrumentImgWidth:100
+            instrumentImgWidth:100,
+            section:'Bass Guitars'
         },
         {
             headerBgURL: headerBg3,
             headerDesc:"A drummer isn't just keeping time, they're leading the band. They set the pace and guide the energy of the music.",
             instrumentImg:yamahaDrums,
             rotateInstrumentImg:false,
-            instrumentImgWidth:330
+            instrumentImgWidth:330,
+            section:'Drums'
         },
         {
             headerBgURL: headerBg4,
             headerDesc:"A single note on the violin can speak more powerfully than a thousand words.",
             instrumentImg:violin,
-            rotateInstrumentImg:false
+            rotateInstrumentImg:false,
+            section:'Violins'
         },
     ]
     return <div className="header md:mt-[96px] mt-[80px]">
@@ -74,7 +79,10 @@ export const Header = ()=>{
                 <div className="slide-description flex flex-col gap-4 justify-center h-full md:order-first order-last">
                     <h1 className="header-title font-orbitron">Maghh Store.</h1>
                     <p className="header-subtitle">{slide.headerDesc}</p>
-                    <Button className="self-baseline">Shop now</Button>
+                    <div className="buttons flex gap-2">
+                        <Button>Shop now</Button>
+                        <Button>View {slide.section}</Button>
+                    </div>
                 </div>
                 <div className={`slide-img md:px-10`}>
                     <img src={slide.instrumentImg} className={`${slide.rotateInstrumentImg? 'rotate-45' : null}`} width={slide.instrumentImgWidth?? 200} alt="fender stratocaster electric guitar" />
