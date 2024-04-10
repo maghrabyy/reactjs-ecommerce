@@ -29,7 +29,7 @@ export const HomeSection = ({sectionTitle,prodList,sortBy}:HomeSectionType)=>{
     prodList.sort((a,b)=>b.prodDate.getTime()-a.prodDate.getTime())  
     return <div className="section">
     <h1 className='section-title'>{sectionTitle}</h1>
-    <div className="prods-list grid md:grid-cols-4 sm:grid-cols-3 grid-cols-1 gap-2 ">
+    <div className="prods-list grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-2 ">
         {sectionProdsList.map(prod=>{
             return <ProductCard 
             key={prod.prodId}

@@ -37,7 +37,7 @@ export const ProductCard = ({prodImg,prodAvailability,prodTitle,prodDesc,prodRat
                 {prodOffer*100}%
             </Badge>}
         </div>
-        <CardTitle className="cursor-pointer hover:text-slate-700 select-none">{prodTitle}</CardTitle>
+        <CardTitle className="cursor-pointer hover:text-slate-700 select-none md:text-xl sm:text-lg text-base truncate">{prodTitle}</CardTitle>
         <CardDescription className=" truncate">{prodDesc}</CardDescription>
         <CardDescription className="flex items-center gap-2">
             {Array.from({length:prodStars},(_,index)=><FaStar key={index}/>)}

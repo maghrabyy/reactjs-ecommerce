@@ -33,7 +33,7 @@ p{
 }
 
 .section-title{
-    @apply font-bold font-orbitron text-4xl pb-4 mb-4 border-b-2 border-b-black lg:w-3/12 md:w-4/12 sm:w-6/12 w-8/12
+    @apply font-bold font-orbitron sm:text-4xl text-2xl pb-4 mb-4 border-b-2 border-b-black lg:w-3/12 md:w-4/12 sm:w-6/12 w-8/12
 }
 
 .link{
