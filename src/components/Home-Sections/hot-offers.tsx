@@ -3,15 +3,17 @@ import gibsonGuitar from '../../assets/instruments/gibson-guitar.png';
 import marshalAmp from '../../assets/instruments/marshal-amp2.png';
 import yamahaDrums from '../../assets/instruments/yamaha-drums.png';
 
-import { HomeSection,prodType } from '../home-section';
+import { HomeSection } from '../home-section';
+import { ProdType } from '@/types/product-type';
 
 export const HotOffersItems = ()=>{
-    const hotOffersProds : prodType[] = [
+    const hotOffersProds : ProdType[] = [
         {
             prodId:'1bg',
             prodImg:fenderBass,
             availability:true,
-            prodTitle:'Fender Bass',
+            prodBrand:'Fender',
+            prodTitle:'Bass',
             prodDesc:'Fender bass guitar.',
             prodRate:164,
             prodStars:4,
@@ -23,7 +25,8 @@ export const HotOffersItems = ()=>{
             prodId:'1g',
             prodImg:gibsonGuitar,
             availability:true,
-            prodTitle:'Gibson Guitar',
+            prodBrand:'Gibson',
+            prodTitle:'Guitar',
             prodDesc:'Gibson red electric guitar.',
             prodRate:129,
             prodStars:4,
@@ -35,7 +38,8 @@ export const HotOffersItems = ()=>{
             prodId:'1m',
             prodImg:marshalAmp,
             availability:true,
-            prodTitle:'Marshal Amplifier',
+            prodBrand:'Marshal',
+            prodTitle:'Amplifier',
             prodDesc:'Marshal v39 Amplifier.',
             prodRate:85,
             prodStars:4,
@@ -47,7 +51,8 @@ export const HotOffersItems = ()=>{
             prodId:'1d',
             prodImg:yamahaDrums,
             availability:true,
-            prodTitle:'Yamaha Drums',
+            prodBrand:'Yamaha',
+            prodTitle:'Drums',
             prodDesc:'Yamaha full drumskit.',
             prodRate:19,
             prodStars:3,

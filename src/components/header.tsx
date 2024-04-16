@@ -59,7 +59,7 @@ export const Header = ()=>{
     ]
     return <div className="header md:mt-[96px] mt-[80px]">
     <Swiper
-        className="md:h-[430px] h-[calc(100vh-56px)]"
+        className="md:h-[440px] h-[calc(100vh-56px)]"
         spaceBetween={50}
         slidesPerView={1}
         modules={[Autoplay,Pagination]}
@@ -77,7 +77,7 @@ export const Header = ()=>{
             return <SwiperSlide key={index} style={{backgroundImage: `url(${slide.headerBgURL})`}} className="bg-cover bg-center">
             <div className="slide-content section h-full overlay flex flex-col md:flex-row items-center justify-between">
                 <div className="slide-description flex flex-col gap-4 justify-center h-full md:order-first order-last">
-                    <h1 className="header-title font-orbitron">Maghh Store.</h1>
+                    <h1 className="header-title font-orbitron">Maghh Store</h1>
                     <p className="header-subtitle">{slide.headerDesc}</p>
                     <div className="buttons flex gap-2">
                         <Button>Shop now</Button>

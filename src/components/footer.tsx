@@ -4,6 +4,8 @@ import paypalLogo from '../assets/payment/paypal.png';
 import valuLogo from '../assets/payment/valu.png';
 import { FaFacebook } from 'react-icons/fa';
 import { FaTwitter } from 'react-icons/fa';
+import { FaInstagram } from 'react-icons/fa';
+import { FaTiktok } from 'react-icons/fa';
 import { FaYoutube } from 'react-icons/fa';
 import { FaEnvelope } from 'react-icons/fa';
 import { FaClipboard } from 'react-icons/fa';
@@ -20,14 +22,14 @@ export const Footer = ()=>{
             setEmailCopied(false);
         },2000)
     }
-    return <div className="footer bg-[url(assets/headerbg/guitarnecks.jpg)] bg-center bg-cover md:h-[430px]">
+    return <div className="footer bg-[url(assets/headerbg/guitarnecks.jpg)] bg-center bg-cover">
         <div className="flex flex-col justify-between h-full overlay section">
             <div className="grid gap-4 md:grid-cols-6 grid-cols-2 pb-2">
                 <div className="col-span-2">
                     <h1 className="text-white text-4xl py-2">Maghh Store</h1>
                     <p className="text-gray-300">Find Your Voice. Find Your Instrument.</p>
                     <div className="accepted-payment py-4">
-                        <h2 className="text-white text-2xl">Accepted Patment</h2>
+                        <h2 className="text-white text-2xl">Accepted Payment</h2>
                         <div className="payment-logos grid grid-cols-4 gap-4 items-center">
                             <img src={visaLogo} alt="visa payment logo" />
                             <img src={mastercardLogo} alt="mastercard payment logo" />
@@ -38,31 +40,31 @@ export const Footer = ()=>{
                 </div>
                 <div className="about-us-links">
                     <h2 className="text-white font-bold text-2xl">About Us</h2>
-                    <ul className='ms-2'>
-                        <li className='link'>About Maghh store</li>
+                    <ul className='ms-2 flex flex-col md:gap-4 gap-2 mt-4'>
+                        <li className='link'>Our Story</li>
                         <li className='link'>Branches</li>
                         <li className='link'>Careers</li>
-                        <li className='link'>Contact</li>
                         <li className='link'>Privacy Policy</li>
-                        <li className='link'>Terms and Conditions</li>
+                        <li className='link'>Return Policy</li>
                     </ul>
                 </div>
                 <div className="services-links">
-                    <h2 className="text-white font-bold text-2xl">Services</h2>
-                    <ul className='ms-2'>
-                        <li className='link'>Shop by category</li>
-                        <li className='link'>Shop by brand</li>
-                        <li className='link'>Track order</li>
-                        <li className='link'>Return Policy</li>
+                    <h2 className="text-white font-bold text-2xl">Help</h2>
+                    <ul className='ms-2 flex flex-col md:gap-4 gap-2 mt-4'>
+                        <li className='link'>Contact Us</li>
+                        <li className='link'>FAQ</li>
+                        <li className='link'>Accessability</li>
                     </ul>
                 </div>
                 <div className="contact-links col-span-2">
                     <h2 className="text-white font-bold text-2xl pb-2">Contact</h2>
                     <div className="contact-details flex flex-col gap-2">
                         <ul className='ms-2 flex gap-2'>
-                            <li className='link'><FaFacebook/></li>
-                            <li className='link'><FaTwitter/></li>
-                            <li className='link'><FaYoutube/></li>
+                            <li className='link text-xl'><FaFacebook/></li>
+                            <li className='link text-xl'><FaInstagram/></li>
+                            <li className='link text-xl'><FaTwitter/></li>
+                            <li className='link text-xl'><FaTiktok/></li>
+                            <li className='link text-xl'><FaYoutube/></li>
                         </ul>
                         <div onClick={emailCopyHandler} className="email-address text-white flex gap-2 items-center justify-between bg-slate-700 rounded-md p-2 hover:bg-slate-600 cursor-pointer select-none">
                             <div className="email flex gap-2 items-center">

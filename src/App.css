@@ -25,7 +25,7 @@ p{
 }
 
 .overlay{
-    @apply bg-slate-950 opacity-85
+    @apply bg-slate-950 bg-opacity-85
 }
 
 .section{
@@ -38,4 +38,8 @@ p{
 
 .link{
     @apply text-white font-nunito select-none cursor-pointer hover:text-gray-300
+}
+
+.nav-link{
+    @apply text-slate-900 my-2 font-nunito select-none cursor-pointer hover:text-slate-700
 }

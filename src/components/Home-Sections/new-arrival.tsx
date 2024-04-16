@@ -3,15 +3,17 @@ import ibanezGuitar from '../../assets/instruments/ibanez-acoustic-guitar.png';
 import casioKeyboard from '../../assets/instruments/casio-keyboard.png';
 import espBass from '../../assets/instruments/esp-basss-guitar.png';
 
-import { HomeSection,prodType } from '../home-section';
+import { HomeSection } from '../home-section';
+import { ProdType } from '@/types/product-type';
 
 export const NewArrivalItems = ()=>{
-    const newArrivalProds : prodType[] = [
+    const newArrivalProds : ProdType[] = [
         {
             prodId:'1g',
             prodImg:stratocasterFender,
             availability:true,
-            prodTitle:'Fender Stratocaster',
+            prodBrand:'Fender',
+            prodTitle:'Stratocaster',
             prodDesc:'Fender stratocaster brown electric guitar.',
             prodRate:9,
             prodStars:4,
@@ -22,7 +24,8 @@ export const NewArrivalItems = ()=>{
             prodId:'2g',
             prodImg:ibanezGuitar,
             availability:true,
-            prodTitle:'Ibanez Guitar',
+            prodBrand:'Ibanez',
+            prodTitle:'Guitar',
             prodDesc:'Ibanez acoustic guitar.',
             prodRate:2,
             prodStars:5,
@@ -33,7 +36,8 @@ export const NewArrivalItems = ()=>{
             prodId:'1k',
             prodImg:casioKeyboard,
             availability:true,
-            prodTitle:'Casio Keyboard',
+            prodBrand:'Casio',
+            prodTitle:'Keyboard',
             prodDesc:'Casio digital keyboard.',
             prodRate:0,
             prodStars:0,
@@ -44,7 +48,8 @@ export const NewArrivalItems = ()=>{
             prodId:'1bg',
             prodImg:espBass,
             availability:true,
-            prodTitle:'ESP Bass',
+            prodBrand:'ESP',
+            prodTitle:'Bass',
             prodDesc:'ESP black bass guitar.',
             prodRate:0,
             prodStars:0,

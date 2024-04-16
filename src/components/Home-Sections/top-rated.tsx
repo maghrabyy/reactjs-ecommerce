@@ -3,15 +3,17 @@ import marrshalAmp from '../../assets/instruments/marshal-amp.png';
 import ibanezElectricGuitar from '../../assets/instruments/ibanez-electric-guitar.png';
 import yamahaKeyboard from '../../assets/instruments/yamaha-kayboard.png';
 
-import { HomeSection,prodType } from '../home-section';
+import { HomeSection } from '../home-section';
+import { ProdType } from '@/types/product-type';
 
 export const TopRatedItems = ()=>{
-    const topRatedProds : prodType[] = [
+    const topRatedProds : ProdType[] = [
         {
             prodId:'1g',
             prodImg:stratocasterFenderGuitar,
             availability:true,
-            prodTitle:'Fender Stratocaster',
+            prodBrand:'Fender',
+            prodTitle:'Stratocaster',
             prodDesc:'Fender stratocaster blue electric guitar.',
             prodRate:3432,
             prodStars:4,
@@ -22,7 +24,8 @@ export const TopRatedItems = ()=>{
             prodId:'1m',
             prodImg:marrshalAmp,
             availability:true,
-            prodTitle:'Marshal Amplifier',
+            prodBrand:'Marshal',
+            prodTitle:'Amplifier',
             prodDesc:'Marshal Amplifier.',
             prodRate:2501,
             prodStars:4,
@@ -33,7 +36,8 @@ export const TopRatedItems = ()=>{
             prodId:'2g',
             prodImg:ibanezElectricGuitar,
             availability:true,
-            prodTitle:'Ibanez Guitar',
+            prodBrand:'Ibanez',
+            prodTitle:'Guitar',
             prodDesc:'Ibanez stratocaster black electric guitar.',
             prodRate:2432,
             prodStars:4,
@@ -44,7 +48,8 @@ export const TopRatedItems = ()=>{
             prodId:'1k',
             prodImg:yamahaKeyboard,
             availability:true,
-            prodTitle:'Yamaha Keyboard',
+            prodBrand:'Yamaha',
+            prodTitle:'Keyboard',
             prodDesc:'Yamaha digital keyboard.',
             prodRate:1250,
             prodStars:4,
