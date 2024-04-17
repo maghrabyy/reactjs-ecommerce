@@ -1,7 +1,7 @@
 [
     {
-        "prodId": "1g",
-        "prodImg": "@/assets/instruments/fender-strat-guitar.png",
+        "prodId": "prod01",
+        "prodImg": "/instruments/fender-strat-guitar.png",
         "availability": true,
         "prodBrand": {
             "brandId":"b02",
@@ -23,8 +23,8 @@
         "prodDate": "2024-03-23T22:00:00.000Z"
       },
       {
-        "prodId": "1m",
-        "prodImg": "@/assets/instruments/marshal-amp.png",
+        "prodId": "prod02",
+        "prodImg": "/instruments/marshal-amp.png",
         "availability": true,
         "prodBrand": {
             "brandId":"b07",
@@ -46,8 +46,8 @@
         "prodDate": "2024-02-13T22:00:00.000Z"
       },
       {
-        "prodId": "2g",
-        "prodImg": "@/assets/instruments/ibanez-electric-guitar.png",
+        "prodId": "prod03",
+        "prodImg": "/instruments/ibanez-electric-guitar.png",
         "availability": true,
         "prodBrand": {
             "brandId":"b03",
@@ -69,8 +69,8 @@
         "prodDate": "2023-10-18T21:00:00.000Z"
       },
       {
-        "prodId": "1k",
-        "prodImg": "@/assets/instruments/yamaha-kayboard.png",
+        "prodId": "prod04",
+        "prodImg": "/instruments/yamaha-kayboard.png",
         "availability": true,
         "prodBrand": {
             "brandId":"b01",
@@ -80,6 +80,7 @@
             "categoryId": "c02",
             "categoryTitle":"Keyboard"
         },
+        "prodTitle":"Digital Keyboard",
         "prodDesc": "Yamaha digital keyboard.",
         "prodRate": 1250,
         "prodStars": 4,
@@ -87,8 +88,8 @@
         "prodDate": "2023-11-22T22:00:00.000Z"
       },
       {
-        "prodId": "1g",
-        "prodImg": "@/assets/instruments/stratocaster-guitar.png",
+        "prodId": "prod05",
+        "prodImg": "/instruments/stratocaster-guitar.png",
         "availability": true,
         "prodBrand": {
           "brandId": "b02",
@@ -110,8 +111,8 @@
         "prodDate": "2024-03-28T22:00:00.000Z"
       },
       {
-        "prodId": "2g",
-        "prodImg": "@/assets/instruments/ibanez-acoustic-guitar.png",
+        "prodId": "prod06",
+        "prodImg": "/instruments/ibanez-acoustic-guitar.png",
         "availability": true,
         "prodBrand": {
           "brandId": "b03",
@@ -133,8 +134,8 @@
         "prodDate": "2024-04-05T22:00:00.000Z"
       },
       {
-        "prodId": "1k",
-        "prodImg": "@/assets/instruments/casio-keyboard.png",
+        "prodId": "prod07",
+        "prodImg": "/instruments/casio-keyboard.png",
         "availability": true,
         "prodBrand": {
           "brandId": "b10",
@@ -152,8 +153,8 @@
         "prodDate": "2024-03-31T22:00:00.000Z"
       },
       {
-        "prodId": "1bg",
-        "prodImg": "@/instruments/esp-basss-guitar.png",
+        "prodId": "prod08",
+        "prodImg": "/instruments/esp-basss-guitar.png",
         "availability": true,
         "prodBrand": {
           "brandId": "b06",
@@ -175,8 +176,8 @@
         "prodDate": "2024-04-06T22:00:00.000Z"
       },
       {
-        "prodId": "1bg",
-        "prodImg": "@/assets/instruments/fender-bass-guitar.png",
+        "prodId": "prod09",
+        "prodImg": "/instruments/fender-bass-guitar.png",
         "availability": true,
         "prodBrand": {
           "brandId": "b02",
@@ -199,8 +200,8 @@
         "prodDate": "2023-05-12T21:00:00.000Z"
       },
       {
-        "prodId": "1g",
-        "prodImg": "@/assets/instruments/gibson-guitar.png",
+        "prodId": "prod10",
+        "prodImg": "/instruments/gibson-guitar.png",
         "availability": true,
         "prodBrand": {
           "brandId": "b04",
@@ -223,8 +224,8 @@
         "prodDate": "2023-06-19T21:00:00.000Z"
       },
       {
-        "prodId": "1m",
-        "prodImg": "@/assets/instruments/marshal-amp2.png",
+        "prodId": "prod11",
+        "prodImg": "/instruments/marshal-amp2.png",
         "availability": true,
         "prodBrand": {
           "brandId": "b07",
@@ -247,10 +248,13 @@
         "prodDate": "2023-07-01T21:00:00.000Z"
       },
       {
-        "prodId": "1d",
-        "prodImg": "@/assets/instruments/yamaha-drums.png",
+        "prodId": "prod12",
+        "prodImg": "/instruments/yamaha-drums.png",
         "availability": true,
-        "prodBrand": "Yamaha",
+        "prodBrand": {
+          "brandId":"c01",
+          "brandTitle":"Yamaha"
+        },
         "prodCategory": {
           "categoryId": "c04",
           "categoryTitle": "Drums"

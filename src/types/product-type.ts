@@ -1,13 +1,25 @@
+type prodCategoryType = {
+    categoryId: string,
+    categoryTitle:string,
+    subCategory?:prodCategoryType
+}
+
+type prodBrandType = {
+    brandId:string,
+    brandTitle:string
+}
+
 export type ProdType = {
     prodId:string,
     prodImg:string,
     availability:boolean,
-    prodBrand:string,
+    prodBrand:prodBrandType,
+    prodCategory:prodCategoryType
     prodTitle:string,
     prodDesc:string,
     prodRate:number,
     prodStars:number
     prodPrice:number,
     offer?:number,
-    prodDate:Date
+    prodDate:string
 }

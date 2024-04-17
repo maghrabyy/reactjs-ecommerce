@@ -1,8 +1,4 @@
 import { Button } from "./ui/button"
-import fenderElectricGuitar from '../assets/instruments/fender-guitar.png';
-import fenderBassGuitar from '../assets/instruments/fender-bass-guitar.png';
-import yamahaDrums from '../assets/instruments/yamaha-drums.png'
-import violin from '../assets/instruments/violin.png';
 
 import headerBg1 from '../assets/headerbg/music-store.jpg';
 import headerBg2 from '../assets/headerbg/music-store2.jpg';
@@ -28,7 +24,7 @@ export const Header = ()=>{
         {
             headerBgURL: headerBg2,
             headerDesc:"Electric guitars aren't just instruments, they're voices. Find yours and let it scream.",
-            instrumentImg:fenderElectricGuitar,
+            instrumentImg:'/instruments/fender-guitar.png',
             rotateInstrumentImg:true,
             instrumentImgWidth:170,
             section:'Electric Guitars'
@@ -36,7 +32,7 @@ export const Header = ()=>{
         {
             headerBgURL: headerBg1,
             headerDesc:"A great bassist is the foundation of a rock band. They're the bedrock that allows the melodies and rhythms to soar.",
-            instrumentImg:fenderBassGuitar,
+            instrumentImg:'/instruments/fender-bass-guitar.png',
             rotateInstrumentImg:true,
             instrumentImgWidth:100,
             section:'Bass Guitars'
@@ -44,7 +40,7 @@ export const Header = ()=>{
         {
             headerBgURL: headerBg3,
             headerDesc:"A drummer isn't just keeping time, they're leading the band. They set the pace and guide the energy of the music.",
-            instrumentImg:yamahaDrums,
+            instrumentImg:'/instruments/yamaha-drums.png',
             rotateInstrumentImg:false,
             instrumentImgWidth:330,
             section:'Drums'
@@ -52,14 +48,14 @@ export const Header = ()=>{
         {
             headerBgURL: headerBg4,
             headerDesc:"A single note on the violin can speak more powerfully than a thousand words.",
-            instrumentImg:violin,
+            instrumentImg:'/instruments/violin.png',
             rotateInstrumentImg:false,
             section:'Violins'
         },
     ]
-    return <div className="header md:mt-[96px] mt-[80px]">
+    return <div className="header">
     <Swiper
-        className="md:h-[440px] h-[calc(100vh-56px)]"
+        className="md:h-[465px] h-[calc(100vh-56px)]"
         spaceBetween={50}
         slidesPerView={1}
         modules={[Autoplay,Pagination]}

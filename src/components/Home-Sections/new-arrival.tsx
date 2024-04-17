@@ -1,61 +1,7 @@
-import stratocasterFender from '../../assets/instruments/stratocaster-guitar.png';
-import ibanezGuitar from '../../assets/instruments/ibanez-acoustic-guitar.png';
-import casioKeyboard from '../../assets/instruments/casio-keyboard.png';
-import espBass from '../../assets/instruments/esp-basss-guitar.png';
-
+import products from '@/data/products.json';
 import { HomeSection } from '../home-section';
-import { ProdType } from '@/types/product-type';
 
 export const NewArrivalItems = ()=>{
-    const newArrivalProds : ProdType[] = [
-        {
-            prodId:'1g',
-            prodImg:stratocasterFender,
-            availability:true,
-            prodBrand:'Fender',
-            prodTitle:'Stratocaster',
-            prodDesc:'Fender stratocaster brown electric guitar.',
-            prodRate:9,
-            prodStars:4,
-            prodPrice:10399,
-            prodDate:new Date('March 29, 2024')
-        },
-        {
-            prodId:'2g',
-            prodImg:ibanezGuitar,
-            availability:true,
-            prodBrand:'Ibanez',
-            prodTitle:'Guitar',
-            prodDesc:'Ibanez acoustic guitar.',
-            prodRate:2,
-            prodStars:5,
-            prodPrice:6999,
-            prodDate:new Date('April 6, 2024')
-        },
-        {
-            prodId:'1k',
-            prodImg:casioKeyboard,
-            availability:true,
-            prodBrand:'Casio',
-            prodTitle:'Keyboard',
-            prodDesc:'Casio digital keyboard.',
-            prodRate:0,
-            prodStars:0,
-            prodPrice:12599,
-            prodDate: new Date('April 1, 2024')
-        },
-        {
-            prodId:'1bg',
-            prodImg:espBass,
-            availability:true,
-            prodBrand:'ESP',
-            prodTitle:'Bass',
-            prodDesc:'ESP black bass guitar.',
-            prodRate:0,
-            prodStars:0,
-            prodPrice:10999,
-            prodDate: new Date('April 7, 2024')
-        }
-    ]
+    const newArrivalProds = products.filter(product=>new Date(product.prodDate).getTime()>=new Date("28 March 2024").getTime()).slice(0,4)
     return <HomeSection sectionTitle='New Arrival' prodList={newArrivalProds} sortBy='prodDate' />
 }

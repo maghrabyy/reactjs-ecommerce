@@ -40,6 +40,10 @@ p{
     @apply text-white font-nunito select-none cursor-pointer hover:text-gray-300
 }
 
+.logo-link{
+    @apply select-none font-bold cursor-pointer text-slate-950 hover:text-slate-600 duration-300
+}
+
 .nav-link{
-    @apply text-slate-900 my-2 font-nunito select-none cursor-pointer hover:text-slate-700
+    @apply text-slate-950 font-montserrat select-none cursor-pointer hover:text-slate-600
 }

@@ -46,7 +46,7 @@ export const ProductCard = ({prod,twoColumnsStyle = false}:ProductCardType)=>{
             </Badge>}
         </div>
         <CardTitle className={`cursor-pointer hover:text-slate-700 select-none  ${twoColumnsStyle? 'md:text-2xl sm:text-xl text-base truncate' : 'text-2xl'}`}>
-            {prod.prodBrand} {prod.prodTitle}
+            {prod.prodBrand.brandTitle} {prod.prodTitle}
         </CardTitle>
         <CardDescription className=" truncate">{prod.prodDesc}</CardDescription>
         <CardDescription className="flex items-center gap-2">
