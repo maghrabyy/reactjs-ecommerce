@@ -9,7 +9,7 @@ export const DrawerHamburgerToggler = ()=>{
     const drawerTogglerHandler = ()=>{
       dispatch(toggleDrawer());
     }
-    return <div className={`drawer-toggle-burger ${!drawerToggler && 'md:hidden'} block fixed top-9 z-[100]`}>
+    return <div className={`drawer-toggle-burger ${!drawerToggler && 'md:hidden'} block fixed top-9 sm:left-6 z-[100]`}>
     <Hamburger toggled={drawerToggler} onToggle={drawerTogglerHandler} size={24 }/>
   </div>
 }

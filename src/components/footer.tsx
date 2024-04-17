@@ -3,7 +3,7 @@ import mastercardLogo from '../assets/payment/mastercard.png';
 import paypalLogo from '../assets/payment/paypal.png';
 import valuLogo from '../assets/payment/valu.png';
 import { FaFacebook } from 'react-icons/fa';
-import { FaTwitter } from 'react-icons/fa';
+import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from 'react-icons/fa';
 import { FaTiktok } from 'react-icons/fa';
 import { FaYoutube } from 'react-icons/fa';
@@ -62,7 +62,7 @@ export const Footer = ()=>{
                         <ul className='ms-2 flex gap-2'>
                             <li className='link text-xl'><FaFacebook/></li>
                             <li className='link text-xl'><FaInstagram/></li>
-                            <li className='link text-xl'><FaTwitter/></li>
+                            <li className='link text-xl'><FaXTwitter/></li>
                             <li className='link text-xl'><FaTiktok/></li>
                             <li className='link text-xl'><FaYoutube/></li>
                         </ul>
@@ -89,7 +89,7 @@ export const Footer = ()=>{
                 </div>
             </div>
             <div className="footer-bottom border-t border-t-white pt-3">
-                <p className='text-white text-center'>All Rights reserved by MaghhTech &copy; 2024</p>
+                <p className='text-white text-center sm:text-base text-xs'>All Rights reserved by MaghhTech &copy; 2024</p>
             </div>
         </div>
     </div>

@@ -1,7 +1,7 @@
 [
     {
         "prodId": "prod01",
-        "prodImg": "/instruments/fender-strat-guitar.png",
+        "prodImg": "/products/fender-strat-guitar.png",
         "availability": true,
         "prodBrand": {
             "brandId":"b02",
@@ -24,7 +24,7 @@
       },
       {
         "prodId": "prod02",
-        "prodImg": "/instruments/marshal-amp.png",
+        "prodImg": "/products/marshal-amp.png",
         "availability": true,
         "prodBrand": {
             "brandId":"b07",
@@ -47,7 +47,7 @@
       },
       {
         "prodId": "prod03",
-        "prodImg": "/instruments/ibanez-electric-guitar.png",
+        "prodImg": "/products/ibanez-electric-guitar.png",
         "availability": true,
         "prodBrand": {
             "brandId":"b03",
@@ -70,7 +70,7 @@
       },
       {
         "prodId": "prod04",
-        "prodImg": "/instruments/yamaha-kayboard.png",
+        "prodImg": "/products/yamaha-kayboard.png",
         "availability": true,
         "prodBrand": {
             "brandId":"b01",
@@ -89,7 +89,7 @@
       },
       {
         "prodId": "prod05",
-        "prodImg": "/instruments/stratocaster-guitar.png",
+        "prodImg": "/products/stratocaster-guitar.png",
         "availability": true,
         "prodBrand": {
           "brandId": "b02",
@@ -112,7 +112,7 @@
       },
       {
         "prodId": "prod06",
-        "prodImg": "/instruments/ibanez-acoustic-guitar.png",
+        "prodImg": "/products/ibanez-acoustic-guitar.png",
         "availability": true,
         "prodBrand": {
           "brandId": "b03",
@@ -135,7 +135,7 @@
       },
       {
         "prodId": "prod07",
-        "prodImg": "/instruments/casio-keyboard.png",
+        "prodImg": "/products/casio-keyboard.png",
         "availability": true,
         "prodBrand": {
           "brandId": "b10",
@@ -154,7 +154,7 @@
       },
       {
         "prodId": "prod08",
-        "prodImg": "/instruments/esp-basss-guitar.png",
+        "prodImg": "/products/esp-basss-guitar.png",
         "availability": true,
         "prodBrand": {
           "brandId": "b06",
@@ -177,7 +177,7 @@
       },
       {
         "prodId": "prod09",
-        "prodImg": "/instruments/fender-bass-guitar.png",
+        "prodImg": "/products/fender-bass-guitar.png",
         "availability": true,
         "prodBrand": {
           "brandId": "b02",
@@ -201,7 +201,7 @@
       },
       {
         "prodId": "prod10",
-        "prodImg": "/instruments/gibson-guitar.png",
+        "prodImg": "/products/gibson-guitar.png",
         "availability": true,
         "prodBrand": {
           "brandId": "b04",
@@ -225,7 +225,7 @@
       },
       {
         "prodId": "prod11",
-        "prodImg": "/instruments/marshal-amp2.png",
+        "prodImg": "/products/marshal-amp2.png",
         "availability": true,
         "prodBrand": {
           "brandId": "b07",
@@ -249,7 +249,7 @@
       },
       {
         "prodId": "prod12",
-        "prodImg": "/instruments/yamaha-drums.png",
+        "prodImg": "/products/yamaha-drums.png",
         "availability": true,
         "prodBrand": {
           "brandId":"c01",

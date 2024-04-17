@@ -38,5 +38,9 @@
     {
         "brandId":"b19",
         "brandTitle":"Casio"
+    },
+    {
+        "brandId":"b20",
+        "brandTitle":"JBL"
     }
 ]
