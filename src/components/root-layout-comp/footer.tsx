@@ -1,7 +1,7 @@
-import visaLogo from '../assets/payment/visa.png';
-import mastercardLogo from '../assets/payment/mastercard.png';
-import paypalLogo from '../assets/payment/paypal.png';
-import valuLogo from '../assets/payment/valu.png';
+import visaLogo from '../../assets/payment/visa.png';
+import mastercardLogo from '../../assets/payment/mastercard.png';
+import paypalLogo from '../../assets/payment/paypal.png';
+import valuLogo from '../../assets/payment/valu.png';
 import { FaFacebook } from 'react-icons/fa';
 import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from 'react-icons/fa';
@@ -40,7 +40,7 @@ export const Footer = ()=>{
                 </div>
                 <div className="about-us-links">
                     <h2 className="text-white font-bold text-2xl">About Us</h2>
-                    <ul className='ms-2 flex flex-col md:gap-4 gap-2 mt-4'>
+                    <ul className='ms-2 flex flex-col items-baseline md:gap-4 gap-2 mt-4'>
                         <li className='link'>Our Story</li>
                         <li className='link'>Branches</li>
                         <li className='link'>Careers</li>
@@ -50,7 +50,7 @@ export const Footer = ()=>{
                 </div>
                 <div className="services-links">
                     <h2 className="text-white font-bold text-2xl">Help</h2>
-                    <ul className='ms-2 flex flex-col md:gap-4 gap-2 mt-4'>
+                    <ul className='ms-2 flex flex-col items-baseline md:gap-4 gap-2 mt-4'>
                         <li className='link'>Contact Us</li>
                         <li className='link'>FAQ</li>
                         <li className='link'>Accessability</li>

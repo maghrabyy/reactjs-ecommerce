@@ -25,10 +25,11 @@ export const ProductCard = ({prod,twoColumnsStyle = false}:ProductCardType)=>{
     const dispatch = useDispatch();
     const addToCartHandler = ()=>{
         const shoppingCartItem:ShoppingCartType = {
+            itemId:'item' + crypto.randomUUID(),
             item:prod,
             itemQuantity:1,
             totalPrice:function(){
-                return this.item.prodPrice+this.itemQuantity
+                return this.item.prodPrice*this.itemQuantity
             }
         }
         dispatch(addItemToCart(shoppingCartItem))
@@ -55,8 +56,8 @@ export const ProductCard = ({prod,twoColumnsStyle = false}:ProductCardType)=>{
             ({prod.prodRate.toLocaleString()})
         </CardDescription>
     </CardHeader>
-    <CardContent className="flex flex-col lg:flex-row gap-2 lg:items-center justify-between">
-        <Button onClick={addToCartHandler} className="order-last lg:order-first"><ShoppingCart className="me-2"/> Add to cart</Button>
+    <CardContent className="flex flex-col xl:flex-row xl:gap-0 gap-2 xl:items-center justify-between">
+        <Button onClick={addToCartHandler} className="order-last xl:order-first"><ShoppingCart className="me-2"/> Add to cart</Button>
             {prod.offer? <div className="offer-price flex flex-col gap-1">
             <Badge variant="secondary" className="old-offer-price font-bold flex justify-center text-center">
                 <del className="old-price">{prod.prodPrice.toLocaleString()} EGP</del></Badge>

@@ -6,7 +6,6 @@ import { RootState } from '..';
 const initialState: ShoppingCartType[] = [];
 
 export const useShoppingCartItems = ()=> useSelector((state:RootState)=>state.shoppingCartItems)
-
 const shoppingCartSlice = createSlice({
     name:'shoppingCart',
     initialState,
@@ -19,9 +18,17 @@ const shoppingCartSlice = createSlice({
         removeItemFromCart(state:ShoppingCartType[],action:PayloadAction<ShoppingCartType>){
             const index = state.indexOf(action.payload)
             state = state.splice(index,1)
+        },
+        incrementItemQuantity(state:ShoppingCartType[],action:PayloadAction<ShoppingCartType>){
+            const itemIndex = state.map(item=>item.itemId).indexOf(action.payload.itemId)
+            state[itemIndex].itemQuantity += 1;
+        },
+        decrementItemQuantity(state:ShoppingCartType[],action:PayloadAction<ShoppingCartType>){
+            const itemIndex = state.map(item=>item.itemId).indexOf(action.payload.itemId)
+            state[itemIndex].itemQuantity -= 1;
         }
     }
 })
 
-export const {addItemToCart, removeItemFromCart} = shoppingCartSlice.actions
+export const {addItemToCart, removeItemFromCart, incrementItemQuantity,decrementItemQuantity} = shoppingCartSlice.actions
 export const shoppingCartReducer = shoppingCartSlice.reducer;

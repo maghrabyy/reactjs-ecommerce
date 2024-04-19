@@ -1,9 +1,9 @@
-import { Button } from "./ui/button"
+import { Button } from "../ui/button"
 
-import headerBg1 from '../assets/headerbg/music-store.jpg';
-import headerBg2 from '../assets/headerbg/music-store2.jpg';
-import headerBg3 from '../assets/headerbg/music-store3.jpg';
-import headerBg4 from '../assets/headerbg/music-store4.jpg';
+import headerBg1 from '../../assets/headerbg/music-store.jpg';
+import headerBg2 from '../../assets/headerbg/music-store2.jpg';
+import headerBg3 from '../../assets/headerbg/music-store3.jpg';
+import headerBg4 from '../../assets/headerbg/music-store4.jpg';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';

@@ -1,4 +1,4 @@
-import { ProductCard } from "./product-card"
+import { ProductCard } from "../product-card"
 import { ProdType } from "@/types/product-type"
 
 enum SortBy {
