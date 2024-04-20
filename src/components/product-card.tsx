@@ -29,7 +29,9 @@ export const ProductCard = ({prod,twoColumnsStyle = false}:ProductCardType)=>{
             item:prod,
             itemQuantity:1,
             totalPrice:function(){
-                return this.item.prodPrice*this.itemQuantity
+                const prodDiscount  = this.item.prodPrice*this.item.offer!;
+                const prodPrice = this.item.offer? this.item.prodPrice-prodDiscount : this.item.prodPrice;
+                return prodPrice*this.itemQuantity
             }
         }
         dispatch(addItemToCart(shoppingCartItem))

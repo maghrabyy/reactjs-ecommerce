@@ -4,6 +4,8 @@ import { createBrowserRouter, RouterProvider, Route, createRoutesFromElements } 
 import { RootLayout } from './layouts/root-layout'
 import { HomePage } from './pages/homePage'
 import { ShoppingCartPage } from './pages/shoppingCartPage';
+import { ShippingDetails } from './components/shopping-cart-comp/shipping-details';
+import { PaymentMethod } from './components/shopping-cart-comp/payment-method';
 import { DealsPage } from './pages/dealsPage';
 import { ContactUsPage } from './pages/contact-usPage';
 import { AboutPage } from './pages/aboutPage';
@@ -13,7 +15,10 @@ function App() {
   const router = createBrowserRouter(createRoutesFromElements(
     <Route path='/' element={<RootLayout/>}>
       <Route index element={<HomePage/>}/>
-      <Route path='/shopping-cart' element={<ShoppingCartPage/>}/>
+      <Route path='/shopping-cart' element={<ShoppingCartPage/>}>
+        <Route path='shipping-details' element={<ShippingDetails/>}/>
+        <Route path='payment-methods' element={<PaymentMethod/>}/>
+      </Route>
       <Route path='/deals' element={<DealsPage/>}/>
       <Route path='/contact-us' element={<ContactUsPage/>}/>
       <Route path='/about' element={<AboutPage/>}/>
