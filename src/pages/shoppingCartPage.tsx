@@ -35,7 +35,7 @@ export const ShoppingCartPage = ()=>{
             </BreadcrumbList>
         </Breadcrumb>
 
-        {shoppingCartItems.map(cartItem =>{
+        {outlet || shoppingCartItems.map(cartItem =>{
                 return <CartItem key={cartItem.itemId} cartItem={cartItem} />}).reverse()}
         </div>
         <OrderSummary ordersAmount={ordersAmount} shippingFees={SHIPPING_FEES} />
