@@ -16,8 +16,8 @@ const shoppingCartSlice = createSlice({
             }
         },
         removeItemFromCart(state:ShoppingCartType[],action:PayloadAction<ShoppingCartType>){
-            const index = state.indexOf(action.payload)
-            state = state.splice(index,1)
+            const itemIndex = state.map(item=>item.itemId).indexOf(action.payload.itemId)
+            state = state.splice(itemIndex,1)
         },
         incrementItemQuantity(state:ShoppingCartType[],action:PayloadAction<ShoppingCartType>){
             const itemIndex = state.map(item=>item.itemId).indexOf(action.payload.itemId)
