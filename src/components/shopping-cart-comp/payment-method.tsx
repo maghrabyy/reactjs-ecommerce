@@ -108,43 +108,47 @@ export const PaymentMethod = () => {
         <form onSubmit={handleSubmit(paymentMethodSubmitHandler)}>
           <div className="credit-debit-payment flex gap-2">
             <input
+              id="credit-debit"
               value="credit-debit"
               type="radio"
               {...register('paymentMethod', {
                 required: 'You have to select a payment method first.',
               })}
             />
-            <label>Credit/Debit Card</label>
+            <label htmlFor="credit-debit">Credit/Debit Card</label>
           </div>
           <div className="paypal-payment flex gap-2">
             <input
+              id="paypal"
               type="radio"
               value="paypal"
               {...register('paymentMethod', {
                 required: 'You have to select a payment method first.',
               })}
             />
-            <label>Paypal</label>
+            <label htmlFor="paypal">Paypal</label>
           </div>
           <div className="valu-payment flex gap-2">
             <input
+              id="valu"
               type="radio"
               value="valu"
               {...register('paymentMethod', {
                 required: 'You have to select a payment method first.',
               })}
             />
-            <label>Valu</label>
+            <label htmlFor="valu">Valu</label>
           </div>
           <div className="cash-payment flex gap-2">
             <input
+              id="cash"
               type="radio"
               value="cash"
               {...register('paymentMethod', {
                 required: 'You have to select a payment method first.',
               })}
             />
-            <label>Cash on Delivery</label>
+            <label htmlFor="cash">Cash on Delivery</label>
           </div>
         </form>
       </div>
