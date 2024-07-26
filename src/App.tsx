@@ -10,6 +10,7 @@ import { DealsPage } from './pages/dealsPage';
 import { ContactUsPage } from './pages/contact-usPage';
 import { AboutPage } from './pages/aboutPage';
 import { NotFound404Page } from './pages/notFoundPage';
+import { Toaster } from "@/components/ui/toaster"
 
 function App() {
   const router = createBrowserRouter(createRoutesFromElements(
@@ -27,6 +28,7 @@ function App() {
   ))
   return (
     <div>
+      <Toaster />
       <RouterProvider router={router} />
     </div>
   )

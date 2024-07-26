@@ -11,9 +11,7 @@ const shoppingCartSlice = createSlice({
     initialState,
     reducers:{
         addItemToCart(state:ShoppingCartType[],action:PayloadAction<ShoppingCartType>){
-            if(!state.map(cartItem=>cartItem.item.prodId).includes(action.payload.item.prodId)){
-                state.push(action.payload)
-            }
+            state.push(action.payload)
         },
         removeItemFromCart(state:ShoppingCartType[],action:PayloadAction<ShoppingCartType>){
             const itemIndex = state.map(item=>item.itemId).indexOf(action.payload.itemId)

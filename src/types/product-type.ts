@@ -16,6 +16,7 @@ export type ProdType = {
     prodBrand:prodBrandType,
     prodCategory:prodCategoryType
     prodTitle:string,
+    prodColor?:string,
     prodDesc:string,
     prodRate:number,
     prodStars:number
