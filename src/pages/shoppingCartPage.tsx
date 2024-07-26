@@ -22,16 +22,17 @@ export const ShoppingCartPage = () => {
   useEffect(() => {
     if (shoppingCartItems.length === 0) {
       dispatch(resetOrderInfo());
+    } else {
+      dispatch(
+        setAmountDetail({
+          amountDetail: {
+            subtotal: ordersAmount,
+            shippingFees: SHIPPING_FEES,
+            total: ordersAmount + SHIPPING_FEES,
+          },
+        }),
+      );
     }
-    dispatch(
-      setAmountDetail({
-        amountDetail: {
-          subtotal: ordersAmount,
-          shippingFees: SHIPPING_FEES,
-          total: ordersAmount + SHIPPING_FEES,
-        },
-      }),
-    );
   }, [shoppingCartItems]);
   return shoppingCartItems.length > 0 ? (
     <div className="shopping-cart-page min-h-screen section py-8 grid md:grid-cols-3 grid-cols-1 md:gap-4 md:space-y-0 space-y-4">

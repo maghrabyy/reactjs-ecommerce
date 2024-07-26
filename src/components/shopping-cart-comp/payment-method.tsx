@@ -14,14 +14,22 @@ import {
 } from '@/components/ui/alert-dialog';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
+import { addOrder } from '@/store/slices/orderSlice';
+import { emptyShoppingCart } from '@/store/slices/shoppingCartSlice';
+import { useShoppingCartItems } from '@/store/slices/shoppingCartSlice';
+import { resetOrderInfo } from '@/store/slices/pendingOrderSlice';
+import { useDispatch } from 'react-redux';
 
 type paymentMethodForm = {
   paymentMethod: string;
 };
 
 export const PaymentMethod = () => {
+  const [openConfirmDialog, setOpenConfirmDialog] = useState(false);
   const { cstInfo, shippingDetails, amountDetail } = usePendingOrderInfo();
+  const shoppingCartItems = useShoppingCartItems();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const {
     register,
     handleSubmit,
@@ -34,7 +42,29 @@ export const PaymentMethod = () => {
       setOpenConfirmDialog(true);
     }
   };
-  const [openConfirmDialog, setOpenConfirmDialog] = useState(false);
+
+  const confirmOrderHandler = () => {
+    const orderId = 'ORD' + crypto.randomUUID();
+    dispatch(emptyShoppingCart());
+    dispatch(resetOrderInfo());
+    dispatch(
+      addOrder({
+        orderId,
+        orderItems: shoppingCartItems.map((cartItem) => ({
+          item: cartItem.item,
+          itemQuantity: cartItem.itemQuantity,
+          itemSubtotal: cartItem.totalPrice(),
+        })),
+        shippingFees: amountDetail!.shippingFees,
+        totalOrderAmount: amountDetail!.total,
+        paymentMethod: watch('paymentMethod'),
+        cstInfo: cstInfo!,
+        shippingDetails: shippingDetails!,
+        orderStatus: 'pending',
+      }),
+    );
+    navigate('/');
+  };
   return (
     <div className="payment-method space-y-4">
       <div className="cst-info">
@@ -138,7 +168,7 @@ export const PaymentMethod = () => {
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel>Cancel</AlertDialogCancel>
-            <AlertDialogAction onClick={() => setOpenConfirmDialog(false)}>
+            <AlertDialogAction onClick={confirmOrderHandler}>
               Confirm
             </AlertDialogAction>
           </AlertDialogFooter>

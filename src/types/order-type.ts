@@ -24,12 +24,17 @@ export enum OrderStatuses {
   refunded,
 }
 
+type OrderItem = {
+  item: ProdType;
+  itemQuantity: number;
+  itemSubtotal: number;
+};
+
 export type OrderType = {
   orderId: string;
-  item: ProdType;
-  itemAmount: number;
+  orderItems: OrderItem[];
   shippingFees: number;
-  totalOrderAmount: () => number;
+  totalOrderAmount: number;
   paymentMethod: string;
   cstInfo: CstInfoType;
   shippingDetails: ShippingDetailsType;
