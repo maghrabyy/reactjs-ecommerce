@@ -1,62 +1,76 @@
 [
-    {
-        "categoryId":"c01",
-        "categoryTitle":"Guitars",
-        "subCategories":[
-            {
-                "categoryId":"gc01",
-                "categoryTitle":"Electric Guitars"
-            },
-            {
-                "categoryId":"gc02",
-                "categoryTitle":"Acoustic Guitars"
-            },
-            {
-                "categoryId":"gc03",
-                "categoryTitle":"Bass Guitars"
-            },
-            {
-                "categoryId":"gc04",
-                "categoryTitle":"Classical Guitars"
-            },
-            {
-                "categoryId":"gc05",
-                "categoryTitle":"Ukelele"
-            },
-            {
-                "categoryId":"gc06",
-                "categoryTitle":"Guitar Amplifiers"
-            },
-            {
-                "categoryId":"gc07",
-                "categoryTitle":"Guitar Accessories"
-            }
-        ]
-    },
-    {
-        "categoryId":"c02",
-        "categoryTitle":"Violins",
-        "subCategories":[
-            {
-                "categoryId":"vc01",
-                "categoryTitle":"Electric Violins"
-            },
-            {
-                "categoryId":"vc02",
-                "categoryTitle":"Classical Violins"
-            }
-        ]
-    },
-    {
-        "categoryId":"c03",
-        "categoryTitle":"Keyboards"
-    },
-    {
-        "categoryId":"c04",
-        "categoryTitle":"Drums"
-    },
-    {
-        "categoryId":"c05",
-        "categoryTitle":"Studio Equipments"
-    }
+  {
+    "categoryId": "c01",
+    "categoryImg": "/categories/acousticguitar.png",
+    "categoryTitle": "Guitars",
+    "subCategories": [
+      {
+        "categoryId": "gc01",
+        "categoryImg": "/categories/electricguitar.png",
+        "categoryTitle": "Electric Guitars"
+      },
+      {
+        "categoryId": "gc02",
+        "categoryImg": "/categories/acousticguitar.png",
+        "categoryTitle": "Acoustic Guitars"
+      },
+      {
+        "categoryId": "gc03",
+        "categoryImg": "/categories/bassguitar.png",
+        "categoryTitle": "Bass Guitars"
+      },
+      {
+        "categoryId": "gc04",
+        "categoryImg": "/categories/classicguitar.png",
+        "categoryTitle": "Classical Guitars"
+      },
+      {
+        "categoryId": "gc05",
+        "categoryImg": "/categories/ukelele.png",
+        "categoryTitle": "Ukelele"
+      },
+      {
+        "categoryId": "gc06",
+        "categoryImg": "/categories/guitaramp.png",
+        "categoryTitle": "Guitar Amplifiers"
+      },
+      {
+        "categoryId": "gc07",
+        "categoryImg": "/categories/guitaraccessories.png",
+        "categoryTitle": "Guitar Accessories"
+      }
+    ]
+  },
+  {
+    "categoryId": "c02",
+    "categoryImg": "/categories/violin.png",
+    "categoryTitle": "Violins",
+    "subCategories": [
+      {
+        "categoryId": "vc01",
+        "categoryImg": "/categories/electricviolin.png",
+        "categoryTitle": "Electric Violins"
+      },
+      {
+        "categoryId": "vc02",
+        "categoryImg": "/categories/violin.png",
+        "categoryTitle": "Classical Violins"
+      }
+    ]
+  },
+  {
+    "categoryId": "c03",
+    "categoryImg": "/categories/electrickeyboard.png",
+    "categoryTitle": "Keyboards"
+  },
+  {
+    "categoryId": "c04",
+    "categoryImg": "/categories/drums.png",
+    "categoryTitle": "Drums"
+  },
+  {
+    "categoryId": "c05",
+    "categoryImg": "/categories/studioequipments.png",
+    "categoryTitle": "Studio Equipments"
+  }
 ]

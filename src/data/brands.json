@@ -1,46 +1,57 @@
 [
-    {
-        "brandId":"b01",
-        "brandTitle":"Yamaha"
-    },
-    {
-        "brandId":"b02",
-        "brandTitle":"Fender"
-    },
-    {
-        "brandId":"b03",
-        "brandTitle":"Ibanez"
-    },
-    {
-        "brandId":"b04",
-        "brandTitle":"Gibson"
-    },
-    {
-        "brandId":"b05",
-        "brandTitle":"Cort"
-    },
-    {
-        "brandId":"b06",
-        "brandTitle":"ESP"
-    },
-    {
-        "brandId":"b07",
-        "brandTitle":"Marshal"
-    },
-    {
-        "brandId":"b08",
-        "brandTitle":"Orange"
-    },
-    {
-        "brandId":"b09",
-        "brandTitle":"Blackstar"
-    },
-    {
-        "brandId":"b19",
-        "brandTitle":"Casio"
-    },
-    {
-        "brandId":"b20",
-        "brandTitle":"JBL"
-    }
+  {
+    "brandId": "b01",
+    "brandImg": "/brands/yamaha.png",
+    "brandTitle": "Yamaha"
+  },
+  {
+    "brandId": "b02",
+    "brandImg": "/brands/fender.png",
+    "brandTitle": "Fender"
+  },
+  {
+    "brandId": "b03",
+    "brandImg": "/brands/ibanez.png",
+    "brandTitle": "Ibanez"
+  },
+  {
+    "brandId": "b04",
+    "brandImg": "/brands/gibson.png",
+    "brandTitle": "Gibson"
+  },
+  {
+    "brandId": "b05",
+    "brandImg": "/brands/cort.png",
+    "brandTitle": "Cort"
+  },
+  {
+    "brandId": "b06",
+    "brandImg": "/brands/esp.png",
+    "brandTitle": "ESP"
+  },
+  {
+    "brandId": "b07",
+    "brandImg": "/brands/marshal.png",
+    "brandTitle": "Marshal"
+  },
+  {
+    "brandId": "b08",
+    "brandImg": "/brands/orange.png",
+    "brandTitle": "Orange"
+  },
+  {
+    "brandId": "b09",
+    "brandImg": "/brands/blackstar.png",
+    "brandTitle": "Blackstar"
+  },
+  {
+    "brandId": "b10",
+    "brandImg": "/brands/casio.png",
+    "brandTitle": "Casio"
+  },
+  {
+    "brandId": "b11",
+    "brandImg": "/brands/jbl.png",
+    "brandTitle": "JBL"
+  }
 ]

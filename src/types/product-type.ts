@@ -1,26 +1,28 @@
-type prodCategoryType = {
-    categoryId: string,
-    categoryTitle:string,
-    subCategory?:prodCategoryType
-}
+export type prodCategoryType = {
+  categoryId: string;
+  categoryTitle: string;
+  categoryImg: string;
+  subCategories?: prodCategoryType[];
+};
 
-type prodBrandType = {
-    brandId:string,
-    brandTitle:string
-}
+export type prodBrandType = {
+  brandId: string;
+  brandTitle: string;
+  brandImg: string;
+};
 
 export type ProdType = {
-    prodId:string,
-    prodImg:string,
-    availability:boolean,
-    prodBrand:prodBrandType,
-    prodCategory:prodCategoryType
-    prodTitle:string,
-    prodColor?:string,
-    prodDesc:string,
-    prodRate:number,
-    prodStars:number
-    prodPrice:number,
-    offer?:number,
-    prodDate:string
-}
+  prodId: string;
+  prodImg: string;
+  availability: boolean;
+  prodBrand: prodBrandType;
+  prodCategory: prodCategoryType;
+  prodTitle: string;
+  prodColor?: string;
+  prodDesc: string;
+  prodRate: number;
+  prodStars: number;
+  prodPrice: number;
+  offer?: number;
+  prodDate: string;
+};

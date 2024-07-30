@@ -1,276 +1,309 @@
 [
-    {
-        "prodId": "prod01",
-        "prodImg": "/products/fender-strat-guitar.png",
-        "availability": true,
-        "prodBrand": {
-            "brandId":"b02",
-            "brandTitle":"Fender"
-        },
-        "prodCategory":{
-            "categoryId": "c01",
-            "categoryTitle":"Guitar",
-            "subCategory":{
-                "categoryId": "gc01",
-                "categoryTitle":"Electric Guitar"
-            }
-        },
-        "prodTitle": "Stratocaster",
-        "prodDesc": "Fender stratocaster blue electric guitar.",
-        "prodColor":"Blue",
-        "prodRate": 3432,
-        "prodStars": 4,
-        "prodPrice": 10399,
-        "prodDate": "2024-03-23T22:00:00.000Z"
-      },
-      {
-        "prodId": "prod02",
-        "prodImg": "/products/marshal-amp.png",
-        "availability": true,
-        "prodBrand": {
-            "brandId":"b07",
-            "brandTitle":"Marshal"
-        },
-        "prodCategory":{
-            "categoryId": "c01",
-            "categoryTitle":"Guitar",
-            "subCategory":{
-                "categoryId": "gc06",
-                "categoryTitle":"Guitar Amplifier"
-            }
-        },
-        "prodTitle": "Amplifier",
-        "prodDesc": "Marshal Amplifier.",
-        "prodRate": 2501,
-        "prodStars": 4,
-        "prodPrice": 8399,
-        "prodDate": "2024-02-13T22:00:00.000Z"
-      },
-      {
-        "prodId": "prod03",
-        "prodImg": "/products/ibanez-electric-guitar.png",
-        "availability": true,
-        "prodBrand": {
-            "brandId":"b03",
-            "brandTitle":"Ibanez"
-        },
-        "prodCategory":{
-            "categoryId": "c01",
-            "categoryTitle":"Guitar",
-            "subCategory":{
-                "categoryId": "gc01",
-                "categoryTitle":"Electric Guitar"
-            }
-        },
-        "prodTitle": "Guitar",
-        "prodDesc": "Ibanez stratocaster black electric guitar.",
-        "prodColor":"Black",
-        "prodRate": 2432,
-        "prodStars": 4,
-        "prodPrice": 18599,
-        "prodDate": "2023-10-18T21:00:00.000Z"
-      },
-      {
-        "prodId": "prod04",
-        "prodImg": "/products/yamaha-kayboard.png",
-        "availability": true,
-        "prodBrand": {
-            "brandId":"b01",
-            "brandTitle":"Yamaha"
-        },
-        "prodCategory":{
-            "categoryId": "c02",
-            "categoryTitle":"Keyboard"
-        },
-        "prodTitle":"Digital Keyboard",
-        "prodDesc": "Yamaha digital keyboard.",
-        "prodRate": 1250,
-        "prodStars": 4,
-        "prodPrice": 15999,
-        "prodDate": "2023-11-22T22:00:00.000Z"
-      },
-      {
-        "prodId": "prod05",
-        "prodImg": "/products/stratocaster-guitar.png",
-        "availability": true,
-        "prodBrand": {
-          "brandId": "b02",
-          "brandTitle": "Fender"
-        },
-        "prodCategory": {
-          "categoryId": "c01",
-          "categoryTitle": "Guitar",
-          "subCategory": {
-            "categoryId": "gc01",
-            "categoryTitle": "Electric Guitar"
-          }
-        },
-        "prodTitle": "Stratocaster",
-        "prodDesc": "Fender stratocaster brown electric guitar.",
-        "prodColor":"Brown",
-        "prodRate": 9,
-        "prodStars": 4,
-        "prodPrice": 10399,
-        "prodDate": "2024-03-28T22:00:00.000Z"
-      },
-      {
-        "prodId": "prod06",
-        "prodImg": "/products/ibanez-acoustic-guitar.png",
-        "availability": true,
-        "prodBrand": {
-          "brandId": "b03",
-          "brandTitle": "Ibanez"
-        },
-        "prodCategory": {
-          "categoryId": "c01",
-          "categoryTitle": "Guitar",
-          "subCategory": {
-            "categoryId": "gc02",
-            "categoryTitle": "Acoustic Guitar"
-          }
-        },
-        "prodTitle": "Guitar",
-        "prodDesc": "Ibanez acoustic guitar.",
-        "prodRate": 2,
-        "prodStars": 5,
-        "prodPrice": 6999,
-        "prodDate": "2024-04-05T22:00:00.000Z"
-      },
-      {
-        "prodId": "prod07",
-        "prodImg": "/products/casio-keyboard.png",
-        "availability": true,
-        "prodBrand": {
-          "brandId": "b10",
-          "brandTitle": "Casio"
-        },
-        "prodCategory": {
-          "categoryId": "c02",
-          "categoryTitle": "Keyboard"
-        },
-        "prodTitle": "Keyboard",
-        "prodDesc": "Casio digital keyboard.",
-        "prodRate": 0,
-        "prodStars": 0,
-        "prodPrice": 12599,
-        "prodDate": "2024-03-31T22:00:00.000Z"
-      },
-      {
-        "prodId": "prod08",
-        "prodImg": "/products/esp-basss-guitar.png",
-        "availability": true,
-        "prodBrand": {
-          "brandId": "b06",
-          "brandTitle": "ESP"
-        },
-        "prodCategory": {
-          "categoryId": "c01",
-          "categoryTitle": "Guitar",
-          "subCategory": {
-            "categoryId": "gc03",
-            "categoryTitle": "Bass Guitar"
-          }
-        },
-        "prodTitle": "Bass",
-        "prodDesc": "ESP black bass guitar.",
-        "prodColor":"Black",
-        "prodRate": 0,
-        "prodStars": 0,
-        "prodPrice": 10999,
-        "prodDate": "2024-04-06T22:00:00.000Z"
-      },
-      {
-        "prodId": "prod09",
-        "prodImg": "/products/fender-bass-guitar.png",
-        "availability": true,
-        "prodBrand": {
-          "brandId": "b02",
-          "brandTitle": "Fender"
-        },
-        "prodCategory": {
-          "categoryId": "c01",
-          "categoryTitle": "Guitar",
-          "subCategory": {
-            "categoryId": "gc03",
-            "categoryTitle": "Bass Guitar"
-          }
-        },
-        "prodTitle": "Bass",
-        "prodDesc": "Fender bass guitar.",
-        "prodColor":"White",
-        "prodRate": 164,
-        "prodStars": 4,
-        "prodPrice": 12999,
-        "offer": 0.5,
-        "prodDate": "2023-05-12T21:00:00.000Z"
-      },
-      {
-        "prodId": "prod10",
-        "prodImg": "/products/gibson-guitar.png",
-        "availability": true,
-        "prodBrand": {
-          "brandId": "b04",
-          "brandTitle": "Gibson"
-        },
-        "prodCategory": {
-          "categoryId": "c01",
-          "categoryTitle": "Guitar",
-          "subCategory": {
-            "categoryId": "gc01",
-            "categoryTitle": "Electric Guitar"
-          }
-        },
-        "prodTitle": "Guitar",
-        "prodDesc": "Gibson red electric guitar.",
-        "prodColor":"Red",
-        "prodRate": 129,
-        "prodStars": 4,
-        "prodPrice": 24999,
-        "offer": 0.25,
-        "prodDate": "2023-06-19T21:00:00.000Z"
-      },
-      {
-        "prodId": "prod11",
-        "prodImg": "/products/marshal-amp2.png",
-        "availability": true,
-        "prodBrand": {
-          "brandId": "b07",
-          "brandTitle": "Marshal"
-        },
-        "prodCategory": {
-          "categoryId": "c01",
-          "categoryTitle": "Guitar",
-          "subCategory": {
-            "categoryId": "gc06",
-            "categoryTitle": "Guitar Amplifier"
-          }
-        },
-        "prodTitle": "Amplifier",
-        "prodDesc": "Marshal v39 Amplifier.",
-        "prodRate": 85,
-        "prodStars": 4,
-        "prodPrice": 32999,
-        "offer": 0.25,
-        "prodDate": "2023-07-01T21:00:00.000Z"
-      },
-      {
-        "prodId": "prod12",
-        "prodImg": "/products/yamaha-drums.png",
-        "availability": true,
-        "prodBrand": {
-          "brandId":"c01",
-          "brandTitle":"Yamaha"
-        },
-        "prodCategory": {
-          "categoryId": "c04",
-          "categoryTitle": "Drums"
-        },
-        "prodTitle": "Drums",
-        "prodDesc": "Yamaha full drumskit.",
-        "prodRate": 19,
-        "prodStars": 3,
-        "prodPrice": 18999,
-        "offer": 0.25,
-        "prodDate": "2024-01-16T22:00:00.000Z"
+  {
+    "prodId": "prod01",
+    "prodImg": "/products/fender-strat-guitar.png",
+    "availability": true,
+    "prodBrand": {
+      "brandId": "b02",
+      "brandImg": "/brands/fender.png",
+      "brandTitle": "Fender"
+    },
+    "prodCategory": {
+      "categoryId": "c01",
+      "categoryTitle": "Guitar",
+      "categoryImg": "/categories/acousticguitar.png",
+      "subCategory": {
+        "categoryId": "gc01",
+        "categoryImg": "/categories/electricguitar.png",
+        "categoryTitle": "Electric Guitar"
       }
+    },
+    "prodTitle": "Stratocaster",
+    "prodDesc": "Fender stratocaster blue electric guitar.",
+    "prodColor": "Blue",
+    "prodRate": 3432,
+    "prodStars": 4,
+    "prodPrice": 10399,
+    "prodDate": "2024-03-23T22:00:00.000Z"
+  },
+  {
+    "prodId": "prod02",
+    "prodImg": "/products/marshal-amp.png",
+    "availability": true,
+    "prodBrand": {
+      "brandId": "b07",
+      "brandImg": "/brands/marshal.png",
+      "brandTitle": "Marshal"
+    },
+    "prodCategory": {
+      "categoryId": "c01",
+      "categoryImg": "/categories/acousticguitar.png",
+      "categoryTitle": "Guitar",
+      "subCategory": {
+        "categoryId": "gc06",
+        "categoryImg": "/categories/guitaramp.png",
+        "categoryTitle": "Guitar Amplifier"
+      }
+    },
+    "prodTitle": "Amplifier",
+    "prodDesc": "Marshal Amplifier.",
+    "prodRate": 2501,
+    "prodStars": 4,
+    "prodPrice": 8399,
+    "prodDate": "2024-02-13T22:00:00.000Z"
+  },
+  {
+    "prodId": "prod03",
+    "prodImg": "/products/ibanez-electric-guitar.png",
+    "availability": true,
+    "prodBrand": {
+      "brandId": "b03",
+      "brandImg": "/brands/ibanez.png",
+      "brandTitle": "Ibanez"
+    },
+    "prodCategory": {
+      "categoryId": "c01",
+      "categoryImg": "/categories/acousticguitar.png",
+      "categoryTitle": "Guitar",
+      "subCategory": {
+        "categoryId": "gc01",
+        "categoryImg": "/categories/electricguitar.png",
+        "categoryTitle": "Electric Guitar"
+      }
+    },
+    "prodTitle": "Guitar",
+    "prodDesc": "Ibanez stratocaster black electric guitar.",
+    "prodColor": "Black",
+    "prodRate": 2432,
+    "prodStars": 4,
+    "prodPrice": 18599,
+    "prodDate": "2023-10-18T21:00:00.000Z"
+  },
+  {
+    "prodId": "prod04",
+    "prodImg": "/products/yamaha-kayboard.png",
+    "availability": true,
+    "prodBrand": {
+      "brandId": "b01",
+      "brandImg": "/brands/yamaha.png",
+      "brandTitle": "Yamaha"
+    },
+    "prodCategory": {
+      "categoryId": "c03",
+      "categoryImg": "/categories/electrickeyboard.png",
+      "categoryTitle": "Keyboard"
+    },
+    "prodTitle": "Digital Keyboard",
+    "prodDesc": "Yamaha digital keyboard.",
+    "prodRate": 1250,
+    "prodStars": 4,
+    "prodPrice": 15999,
+    "prodDate": "2023-11-22T22:00:00.000Z"
+  },
+  {
+    "prodId": "prod05",
+    "prodImg": "/products/stratocaster-guitar.png",
+    "availability": true,
+    "prodBrand": {
+      "brandId": "b02",
+      "brandImg": "/brands/fender.png",
+      "brandTitle": "Fender"
+    },
+    "prodCategory": {
+      "categoryId": "c01",
+      "categoryImg": "/categories/acousticguitar.png",
+      "categoryTitle": "Guitar",
+      "subCategory": {
+        "categoryId": "gc01",
+        "categoryImg": "/categories/electricguitar.png",
+        "categoryTitle": "Electric Guitar"
+      }
+    },
+    "prodTitle": "Stratocaster",
+    "prodDesc": "Fender stratocaster brown electric guitar.",
+    "prodColor": "Brown",
+    "prodRate": 9,
+    "prodStars": 4,
+    "prodPrice": 10399,
+    "prodDate": "2024-03-28T22:00:00.000Z"
+  },
+  {
+    "prodId": "prod06",
+    "prodImg": "/products/ibanez-acoustic-guitar.png",
+    "availability": true,
+    "prodBrand": {
+      "brandId": "b03",
+      "brandImg": "/brands/ibanez.png",
+      "brandTitle": "Ibanez"
+    },
+    "prodCategory": {
+      "categoryId": "c01",
+      "categoryImg": "/categories/acousticguitar.png",
+      "categoryTitle": "Guitar",
+      "subCategory": {
+        "categoryId": "gc02",
+        "categoryImg": "/categories/acousticguitar.png",
+        "categoryTitle": "Acoustic Guitar"
+      }
+    },
+    "prodTitle": "Guitar",
+    "prodDesc": "Ibanez acoustic guitar.",
+    "prodRate": 2,
+    "prodStars": 5,
+    "prodPrice": 6999,
+    "prodDate": "2024-04-05T22:00:00.000Z"
+  },
+  {
+    "prodId": "prod07",
+    "prodImg": "/products/casio-keyboard.png",
+    "availability": true,
+    "prodBrand": {
+      "brandId": "b10",
+      "brandImg": "/brands/casio.png",
+      "brandTitle": "Casio"
+    },
+    "prodCategory": {
+      "categoryId": "c03",
+      "categoryImg": "/categories/electrickeyboard.png",
+      "categoryTitle": "Keyboard"
+    },
+    "prodTitle": "Keyboard",
+    "prodDesc": "Casio digital keyboard.",
+    "prodRate": 0,
+    "prodStars": 0,
+    "prodPrice": 12599,
+    "prodDate": "2024-03-31T22:00:00.000Z"
+  },
+  {
+    "prodId": "prod08",
+    "prodImg": "/products/esp-basss-guitar.png",
+    "availability": true,
+    "prodBrand": {
+      "brandId": "b06",
+      "brandImg": "/brands/esp.png",
+      "brandTitle": "ESP"
+    },
+    "prodCategory": {
+      "categoryId": "c01",
+      "categoryImg": "/categories/acousticguitar.png",
+      "categoryTitle": "Guitar",
+      "subCategory": {
+        "categoryId": "gc03",
+        "categoryImg": "/categories/bassguitar.png",
+        "categoryTitle": "Bass Guitar"
+      }
+    },
+    "prodTitle": "Bass",
+    "prodDesc": "ESP black bass guitar.",
+    "prodColor": "Black",
+    "prodRate": 0,
+    "prodStars": 0,
+    "prodPrice": 10999,
+    "prodDate": "2024-04-06T22:00:00.000Z"
+  },
+  {
+    "prodId": "prod09",
+    "prodImg": "/products/fender-bass-guitar.png",
+    "availability": true,
+    "prodBrand": {
+      "brandId": "b02",
+      "brandImg": "/brands/fender.png",
+      "brandTitle": "Fender"
+    },
+    "prodCategory": {
+      "categoryId": "c01",
+      "categoryImg": "/categories/acousticguitar.png",
+      "categoryTitle": "Guitar",
+      "subCategory": {
+        "categoryId": "gc03",
+        "categoryImg": "/categories/bassguitar.png",
+        "categoryTitle": "Bass Guitar"
+      }
+    },
+    "prodTitle": "Bass",
+    "prodDesc": "Fender bass guitar.",
+    "prodColor": "White",
+    "prodRate": 164,
+    "prodStars": 4,
+    "prodPrice": 12999,
+    "offer": 0.5,
+    "prodDate": "2023-05-12T21:00:00.000Z"
+  },
+  {
+    "prodId": "prod10",
+    "prodImg": "/products/gibson-guitar.png",
+    "availability": true,
+    "prodBrand": {
+      "brandId": "b04",
+      "brandImg": "/brands/gibson.png",
+      "brandTitle": "Gibson"
+    },
+    "prodCategory": {
+      "categoryId": "c01",
+      "categoryImg": "/categories/acousticguitar.png",
+      "categoryTitle": "Guitar",
+      "subCategory": {
+        "categoryId": "gc01",
+        "categoryImg": "/categories/electricguitar.png",
+        "categoryTitle": "Electric Guitar"
+      }
+    },
+    "prodTitle": "Guitar",
+    "prodDesc": "Gibson red electric guitar.",
+    "prodColor": "Red",
+    "prodRate": 129,
+    "prodStars": 4,
+    "prodPrice": 24999,
+    "offer": 0.25,
+    "prodDate": "2023-06-19T21:00:00.000Z"
+  },
+  {
+    "prodId": "prod11",
+    "prodImg": "/products/marshal-amp2.png",
+    "availability": true,
+    "prodBrand": {
+      "brandId": "b07",
+      "brandImg": "/brands/esp.png",
+      "brandTitle": "Marshal"
+    },
+    "prodCategory": {
+      "categoryId": "c01",
+      "categoryImg": "/categories/acousticguitar.png",
+      "categoryTitle": "Guitar",
+      "subCategory": {
+        "categoryId": "gc06",
+        "categoryImg": "/categories/guitaramp.png",
+        "categoryTitle": "Guitar Amplifier"
+      }
+    },
+    "prodTitle": "Amplifier",
+    "prodDesc": "Marshal v39 Amplifier.",
+    "prodRate": 85,
+    "prodStars": 4,
+    "prodPrice": 32999,
+    "offer": 0.25,
+    "prodDate": "2023-07-01T21:00:00.000Z"
+  },
+  {
+    "prodId": "prod12",
+    "prodImg": "/products/yamaha-drums.png",
+    "availability": true,
+    "prodBrand": {
+      "brandId": "b01",
+      "brandImg": "/brands/yamaha.png",
+      "brandTitle": "Yamaha"
+    },
+    "prodCategory": {
+      "categoryId": "c04",
+      "categoryImg": "/categories/drums.png",
+      "categoryTitle": "Drums"
+    },
+    "prodTitle": "Drums",
+    "prodDesc": "Yamaha full drumskit.",
+    "prodRate": 19,
+    "prodStars": 3,
+    "prodPrice": 18999,
+    "offer": 0.25,
+    "prodDate": "2024-01-16T22:00:00.000Z"
+  }
 ]
