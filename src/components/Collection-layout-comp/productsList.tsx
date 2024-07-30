@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FaFilter } from 'react-icons/fa';
 import { FaSort } from 'react-icons/fa';
 import {
@@ -11,6 +11,7 @@ import {
 import { ProdType } from '@/types/product-type';
 import { ProductCard } from '@/components/product-card';
 import emptyList from '../../assets/Empty-list.svg';
+import { useLocation } from 'react-router-dom';
 
 enum SortOrder {
   asc = 'Alphabetically - A to Z',
@@ -37,6 +38,11 @@ export const ProductsList = ({ prodList }: ProductsListProps) => {
     keyof typeof SortOrder | undefined
   >();
   const [filterBy, setFilterBy] = useState<keyof typeof FilterBy | undefined>();
+  const location = useLocation().pathname;
+
+  useEffect(() => {
+    setProductsList(prodList);
+  }, [location]);
 
   const filterChangeHandler = (value: keyof typeof FilterBy) => {
     setFilterBy(value);
