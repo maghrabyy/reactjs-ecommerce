@@ -1,7 +1,7 @@
 import { Carousel } from '@/components/carousel';
 import { SwiperSlide } from 'swiper/react';
-import { CollectionItem } from '@/components/collectionItem';
-import { ProductsList } from '@/components/productsList';
+import { CollectionItem } from '@/components/Collection-layout-comp/collectionItem';
+import { ProductsList } from '@/components/Collection-layout-comp/productsList';
 import products from '@/data/products.json';
 import { useOutlet } from 'react-router-dom';
 import { prodCategoryType } from '@/types/product-type';

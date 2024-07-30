@@ -113,7 +113,7 @@ export const Drawer = () => {
                   return (
                     <AccordionContent key={brand.brandId}>
                       <NavLink
-                        to={`/collections/${brandTitle}'}`}
+                        to={`/collections/${brandTitle}`}
                         onClick={drawerItemClickedHandler}
                         className="px-2 nav-link"
                       >

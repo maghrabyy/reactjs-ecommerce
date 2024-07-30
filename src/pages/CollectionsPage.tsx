@@ -1,6 +1,6 @@
 import categories from '@/data/categories.json';
 import brands from '@/data/brands.json';
-import { CollectionItem } from '@/components/collectionItem';
+import { CollectionItem } from '@/components/Collection-layout-comp/collectionItem';
 
 export const CollectionsPage = () => {
   return (

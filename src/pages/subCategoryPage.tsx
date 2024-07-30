@@ -1,5 +1,5 @@
 import { prodCategoryType } from '@/types/product-type';
-import { ProductsList } from '@/components/productsList';
+import { ProductsList } from '@/components/Collection-layout-comp/productsList';
 import products from '@/data/products.json';
 
 type SubCategoryPageProps = {

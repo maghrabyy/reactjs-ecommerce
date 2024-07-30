@@ -1,4 +1,4 @@
-import { ProductsList } from '@/components/productsList';
+import { ProductsList } from '@/components/Collection-layout-comp/productsList';
 import products from '@/data/products.json';
 import { useOutlet } from 'react-router-dom';
 import { prodBrandType } from '@/types/product-type';

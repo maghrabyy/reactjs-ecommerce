@@ -10,6 +10,7 @@ import {
 } from '@/components/ui/select';
 import { ProdType } from '@/types/product-type';
 import { ProductCard } from '@/components/product-card';
+import emptyList from '../../assets/Empty-list.svg';
 
 enum SortOrder {
   asc = 'Alphabetically - A to Z',
@@ -88,17 +89,11 @@ export const ProductsList = ({ prodList }: ProductsListProps) => {
       );
     }
   };
-  return prodList.length === 0 ? (
-    <div className="empty-list min-h-[500px] flex items-center justify-center">
-      <h1 className="text-4xl font-bold text-center">
-        There are no products here.
-      </h1>
-    </div>
-  ) : (
+  return (
     <div className="products-list">
-      <div className="filter-sort flex gap-2 py-2">
+      <div className="filter-sort flex gap-2 py-2 justify-between">
         <Select value={filterBy} onValueChange={filterChangeHandler}>
-          <SelectTrigger>
+          <SelectTrigger className="max-w-[250px]">
             <FaFilter /> <SelectValue placeholder="Filter By" />
           </SelectTrigger>
           <SelectContent>
@@ -108,7 +103,7 @@ export const ProductsList = ({ prodList }: ProductsListProps) => {
           </SelectContent>
         </Select>
         <Select value={sortOrder} onValueChange={sortChangeHandler}>
-          <SelectTrigger>
+          <SelectTrigger className="max-w-[250px]">
             <FaSort /> <SelectValue placeholder="Sort By" />
           </SelectTrigger>
           <SelectContent>
@@ -122,11 +117,20 @@ export const ProductsList = ({ prodList }: ProductsListProps) => {
           </SelectContent>
         </Select>
       </div>
-      <div className="products-list grid grid-cols-2 md:grid-cols-4 gap-2">
-        {productsList.map((prod) => (
-          <ProductCard key={prod.prodId} prod={prod} />
-        ))}
-      </div>
+      {productsList.length === 0 ? (
+        <div className="empty-list grid md:grid-cols-2 items-center py-10">
+          <p className="xl:text-3xl text-xl  md:text-start text-center text-gray-600">
+            No products found here.
+          </p>
+          <img src={emptyList} alt="page not found" />
+        </div>
+      ) : (
+        <div className="products-list grid grid-cols-2 md:grid-cols-4 gap-2">
+          {productsList.map((prod) => (
+            <ProductCard key={prod.prodId} prod={prod} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };
