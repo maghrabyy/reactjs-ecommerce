@@ -14,7 +14,6 @@ import { Fragment } from 'react/jsx-runtime';
 export const CollectionLayout = () => {
   const location = useLocation().pathname;
   const outlet = useOutlet();
-  const prevPath = location.substring(0, location.lastIndexOf('/'));
   const pathList = location.substring(1).split('/');
   return (
     <div className="collections-layout section">
@@ -31,14 +30,17 @@ export const CollectionLayout = () => {
             if (index === pathList.length - 1) {
               return (
                 <BreadcrumbItem key={path}>
-                  <BreadcrumbPage>{pathName}</BreadcrumbPage>
+                  <BreadcrumbPage>
+                    {pathName === 'Collections' ? 'Categories' : pathName}
+                  </BreadcrumbPage>
                 </BreadcrumbItem>
               );
             } else {
+              const prevPath = pathList.slice(0, index + 1).join('/');
               return (
                 <Fragment key={path}>
                   <BreadcrumbItem>
-                    <BreadcrumbLink href={prevPath}>
+                    <BreadcrumbLink href={`/${prevPath}`}>
                       {pathName === 'Collections' ? 'Categories' : pathName}
                     </BreadcrumbLink>
                   </BreadcrumbItem>
