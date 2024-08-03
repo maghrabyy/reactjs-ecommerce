@@ -105,14 +105,14 @@ export const ProductsInfo = ({ product }: ProductInfoProps) => {
       </div>
       {product.offer ? (
         <div className="discounted-price flex justify-center md:justify-start gap-2">
-          <h1 className="font-bold text-4xl">
+          <h1 className="font-bold text-2xl sm:text-4xl">
             {discountedPrice.toLocaleString('en', {
               minimumFractionDigits: 0,
               maximumFractionDigits: 0,
             })}{' '}
             EGP
           </h1>
-          <del className="text-2xl">
+          <del className="text-xl sm:text-2xl">
             {' '}
             {product.prodPrice.toLocaleString()} EGP
           </del>
