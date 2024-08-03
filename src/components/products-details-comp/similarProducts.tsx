@@ -9,7 +9,7 @@ type SimilarProductsProps = {
 export const SimilarProducts = ({ similarProds }: SimilarProductsProps) => {
   return (
     similarProds.length > 0 && (
-      <div className="similar-products mt-10">
+      <div className="similar-products mt-4 md:mt-10">
         <h1>Similar Products</h1>
         <Carousel mdSlidesNum={2} spaceBetween={6}>
           {similarProds.map((prod) => (
