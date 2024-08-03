@@ -19,10 +19,11 @@ import { ShoppingCartType } from '@/types/shopping-cart-type';
 import { useToast } from './ui/use-toast';
 import { useShoppingCartItems } from '@/store/slices/shoppingCartSlice';
 import {
-  useWishlist,
   addToWishlist,
   removeFromWishList,
 } from '@/store/slices/wishlistSlice';
+import { Link } from 'react-router-dom';
+import { useIsOnWishlist } from '@/lib/useIsOnWishlist';
 
 type ProductCardType = {
   prod: ProdType;
@@ -32,9 +33,9 @@ export const ProductCard = ({
   prod,
   twoColumnsStyle = false,
 }: ProductCardType) => {
+  const isOnWishlist = useIsOnWishlist(prod.prodId);
   const { toast } = useToast();
   const shoppingCartItems = useShoppingCartItems();
-  const wishlist = useWishlist();
   const totalStarNum = 5;
   const dispatch = useDispatch();
   const addToCartHandler = () => {
@@ -68,10 +69,6 @@ export const ProductCard = ({
     }
   };
 
-  const isOnWishlist = wishlist
-    .map((wishlistProd) => wishlistProd.prodId)
-    .includes(prod.prodId);
-
   const addToWishlistHandler = () => {
     if (!isOnWishlist) {
       dispatch(addToWishlist(prod));
@@ -94,10 +91,13 @@ export const ProductCard = ({
         {isOnWishlist ? <FaHeart /> : <FaRegHeart />}
       </div>
       <CardHeader>
-        <div className="card-img flex justify-center py-2 h-[240px] relative">
+        <Link
+          to={`/products/${prod.prodId}`}
+          className="card-img flex justify-center py-2 h-[240px] relative"
+        >
           <img
             src={prod.prodImg}
-            className="object-contain hover:scale-105 duration-300 ease-in cursor-pointer"
+            className="object-contain hover:scale-105 duration-300 ease-in"
             alt={prod.prodDesc}
           />
           {prod.offer && (
@@ -105,11 +105,13 @@ export const ProductCard = ({
               {prod.offer * 100}%
             </Badge>
           )}
-        </div>
+        </Link>
         <CardTitle
-          className={`cursor-pointer hover:text-slate-700 select-none  ${twoColumnsStyle ? 'md:text-2xl sm:text-xl text-base truncate' : 'text-2xl'}`}
+          className={`hover:text-slate-700 select-none  ${twoColumnsStyle ? 'md:text-2xl sm:text-xl text-base truncate' : 'text-2xl'}`}
         >
-          {prod.prodBrand.brandTitle} {prod.prodTitle}
+          <Link to={`/products/${prod.prodId}`}>
+            {prod.prodBrand.brandTitle} {prod.prodTitle}
+          </Link>
         </CardTitle>
         <CardDescription className=" truncate">{prod.prodDesc}</CardDescription>
         <CardDescription className="flex items-center gap-2">
@@ -151,6 +153,132 @@ export const ProductCard = ({
                 },
               )}{' '}
               EGP
+            </Badge>
+          </div>
+        ) : (
+          <Badge
+            variant="secondary"
+            className="no-offer-price font-bold flex justify-center text-center"
+          >
+            {prod.prodPrice.toLocaleString()} EGP
+          </Badge>
+        )}
+      </CardContent>
+    </Card>
+  );
+};
+
+type MiniProductCard = {
+  prod: ProdType;
+};
+export const MiniProductCard = ({ prod }: ProductCardType) => {
+  const isOnWishlist = useIsOnWishlist(prod.prodId);
+  const { toast } = useToast();
+  const shoppingCartItems = useShoppingCartItems();
+  const dispatch = useDispatch();
+  const addToCartHandler = () => {
+    const shoppingCartItem: ShoppingCartType = {
+      itemId: 'item' + crypto.randomUUID(),
+      item: prod,
+      itemQuantity: 1,
+      totalPrice: function () {
+        const prodDiscount = this.item.prodPrice * this.item.offer!;
+        const prodPrice = this.item.offer
+          ? this.item.prodPrice - prodDiscount
+          : this.item.prodPrice;
+        return prodPrice * this.itemQuantity;
+      },
+    };
+    if (
+      !shoppingCartItems
+        .map((cartItem) => cartItem.item.prodId)
+        .includes(shoppingCartItem.item.prodId)
+    ) {
+      dispatch(addItemToCart(shoppingCartItem));
+      toast({
+        title: 'Added to shopping cart.',
+        description: `${prod.prodBrand.brandTitle} ${prod.prodTitle} has been added to shopping cart.`,
+      });
+    } else {
+      toast({
+        title: 'Added to shopping cart.',
+        description: `${prod.prodBrand.brandTitle} ${prod.prodTitle} is already added to the shopping cart.`,
+      });
+    }
+  };
+
+  const addToWishlistHandler = () => {
+    if (!isOnWishlist) {
+      dispatch(addToWishlist(prod));
+    } else {
+      dispatch(removeFromWishList(prod));
+    }
+  };
+  return (
+    <Card className="relative flex flex-col justify-between h-full">
+      <div
+        className={`absolute top-2 left-2 size-3 rounded-full sm:hidden ${prod.availability ? 'bg-green-500' : 'bg-red-500'}`}
+      ></div>
+      <Badge
+        variant={prod.availability ? 'success' : 'destructive'}
+        className="absolute top-2 left-2 hidden sm:block"
+      >
+        {prod.availability ? 'In stock' : 'Out stock'}
+      </Badge>
+      <div
+        onClick={addToWishlistHandler}
+        className={`add-to-wishlist absolute top-2 right-2 cursor-pointer hover:text-red-600 ${isOnWishlist ? 'text-red-600' : 'text-black'}`}
+      >
+        {isOnWishlist ? <FaHeart /> : <FaRegHeart />}
+      </div>
+      <CardHeader>
+        <Link
+          to={`/products/${prod.prodId}`}
+          className="card-img flex justify-center py-2 h-[150px] relative"
+        >
+          <img
+            src={prod.prodImg}
+            className="object-contain hover:scale-105 duration-300 ease-in"
+            alt={prod.prodDesc}
+          />
+          {prod.offer && (
+            <Badge variant="destructive" className="absolute bottom-0 right-2">
+              {prod.offer * 100}%
+            </Badge>
+          )}
+        </Link>
+        <CardTitle
+          className={`hover:text-slate-700 select-none text-sm md:text-lg truncate`}
+        >
+          <Link to={`/products/${prod.prodId}`}>
+            {prod.prodBrand.brandTitle} {prod.prodTitle}
+          </Link>
+        </CardTitle>
+      </CardHeader>
+      <div className="action absolute top-1 right-6">
+        <ShoppingCart
+          className="me-2 cursor-pointer hover:text-green-500"
+          onClick={addToCartHandler}
+        />
+      </div>
+      <CardContent>
+        {prod.offer ? (
+          <div className="offer-price flex flex-col gap-1">
+            <Badge
+              variant="secondary"
+              className="old-offer-price font-bold flex gap-2 justify-center text-center"
+            >
+              {(prod.prodPrice - prod.prodPrice * prod.offer).toLocaleString(
+                'en',
+                {
+                  minimumFractionDigits: 0,
+                  maximumFractionDigits: 0,
+                },
+              )}{' '}
+              EGP
+              <del className="old-price hidden sm:block">
+                {prod.prodPrice.toLocaleString()} EGP
+              </del>
             </Badge>
           </div>
         ) : (

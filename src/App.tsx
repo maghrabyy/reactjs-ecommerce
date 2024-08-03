@@ -7,7 +7,9 @@ import {
 } from 'react-router-dom';
 
 import { RootLayout } from './layouts/root-layout';
-import { CollectionLayout } from './layouts/collectionLayout';
+import { CollectionLayout } from './layouts/collection-layout';
+import { ProductsLayout } from './layouts/products-layout';
+import { ProductDetailsPage } from './pages/ProductDetailsPage';
 import { CategoriesPage } from './pages/categoriesPage';
 import { SubCategoryPage } from './pages/subCategoryPage';
 import { HomePage } from './pages/homePage';
@@ -69,6 +71,9 @@ function App() {
         <Route path="/collections" element={<CollectionLayout />}>
           {categoriesRoutes}
           {brandsRoutes}
+        </Route>
+        <Route path="/products" element={<ProductsLayout />}>
+          <Route path=":prodId" element={<ProductDetailsPage />} />
         </Route>
         <Route path="*" element={<NotFound404Page />} />
       </Route>,
