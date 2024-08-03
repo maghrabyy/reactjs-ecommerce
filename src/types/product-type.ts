@@ -2,7 +2,7 @@ export type prodCategoryType = {
   categoryId: string;
   categoryTitle: string;
   categoryImg: string;
-  subCategory?: prodCategoryType;
+  subCategories?: prodCategoryType[];
 };
 
 export type prodBrandType = {
@@ -11,12 +11,19 @@ export type prodBrandType = {
   brandImg: string;
 };
 
+type prodCategory = {
+  categoryId: string;
+  categoryTitle: string;
+  categoryImg: string;
+  subCategory?: prodCategory;
+};
+
 export type ProdType = {
   prodId: string;
   prodImg: string;
   availability: boolean;
   prodBrand: prodBrandType;
-  prodCategory: prodCategoryType;
+  prodCategory: prodCategory;
   prodTitle: string;
   prodColor?: string;
   prodDesc: string;
