@@ -20,11 +20,11 @@ export const ProductReview = ({
   prodRating,
   prodStars,
 }: ProductReviewProps) => {
-  const [selectedRate, setSelectedRate] = useState(0);
   const [title, setTitle] = useState('');
   const [review, setReview] = useState('');
   const rates = [1, 2, 3, 4, 5];
   const totalStarNum = 5;
+
   return (
     <div className="product-reviews space-y-2 mt-4 md:mt-10">
       <form className="space-y-2">
@@ -39,18 +39,7 @@ export const ProductReview = ({
           placeholder="Enter your review."
         />
         <div className="submit-review flex gap-2 items-center justify-between">
-          <div className="rate flex gap-2">
-            {Array.from({ length: selectedRate }, (_, index) => (
-              <FaStar key={index} />
-            ))}
-            {rates.slice(selectedRate).map((rate) => (
-              <FaRegStar
-                key={rate}
-                onClick={() => setSelectedRate(rate)}
-                className="cursor-pointer hover:text-gray-700"
-              />
-            ))}
-          </div>
+          <StarRateInput />
           <Button>Submit Review</Button>
         </div>
       </form>
@@ -144,6 +133,35 @@ const CustomerReview = ({
       quidem minus reiciendis facilis obcaecati adipisci quibusdam in
       voluptas, soluta aperiam.`}
       </p>
+    </div>
+  );
+};
+
+const StarRateInput = () => {
+  const [selectedRate, setSelectedRate] = useState(0);
+  const rates = [1, 2, 3, 4, 5];
+  return (
+    <div className="rate flex gap-2">
+      {rates.slice(0, selectedRate).map((rate, index) => (
+        <FaStar
+          key={rate}
+          onClick={() => {
+            if (selectedRate - 1 === index) {
+              setSelectedRate(0);
+            } else {
+              setSelectedRate(rate);
+            }
+          }}
+          className="cursor-pointer hover:text-gray-700"
+        />
+      ))}
+      {rates.slice(selectedRate).map((rate) => (
+        <FaRegStar
+          key={rate}
+          onClick={() => setSelectedRate(rate)}
+          className="cursor-pointer hover:text-gray-700"
+        />
+      ))}
     </div>
   );
 };
