@@ -14,6 +14,8 @@ import { CategoriesPage } from './pages/categoriesPage';
 import { SubCategoryPage } from './pages/subCategoryPage';
 import { HomePage } from './pages/homePage';
 import { ShoppingCartPage } from './pages/shoppingCartPage';
+import { OrdersPage } from './pages/ordersPage';
+import { WishlistPage } from './pages/wishlistPage';
 import { ShippingDetails } from './components/shopping-cart-comp/shipping-details';
 import { PaymentMethod } from './components/shopping-cart-comp/payment-method';
 import { DealsPage } from './pages/dealsPage';
@@ -75,6 +77,8 @@ function App() {
         <Route path="/products" element={<ProductsLayout />}>
           <Route path=":prodId" element={<ProductDetailsPage />} />
         </Route>
+        <Route path="/orders" element={<OrdersPage />} />
+        <Route path="/wishlist" element={<WishlistPage />} />
         <Route path="*" element={<NotFound404Page />} />
       </Route>,
     ),

@@ -1,6 +1,5 @@
 import { ShoppingCart } from 'lucide-react';
 import { Search } from 'lucide-react';
-import { User } from 'lucide-react';
 import Marquee from 'react-fast-marquee';
 import { DrawerHamburgerToggler } from './drawerHamburgerIcon';
 import { Badge } from 'antd';
@@ -18,6 +17,7 @@ import {
 } from '@/components/ui/navigation-menu';
 import { useNavigate } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
+import { AccountMenu } from './accountMenu';
 
 export const Navbar = () => {
   const navigate = useNavigate();
@@ -130,7 +130,7 @@ export const Navbar = () => {
                 className="cursor-pointer hover:text-slate-700"
               />
             </Badge>
-            <User className="cursor-pointer hover:text-slate-700" />
+            <AccountMenu />
           </div>
         </div>
       </div>
