@@ -28,7 +28,7 @@ export const Navbar = () => {
       <div className="navbar  fixed w-full top-0 z-[50] shadow-md">
         <div className="navbar-banner bg-black text-white text-center">
           <Marquee direction="right">
-            <p>website under construction.</p>
+            <p>Hot offers! up to 50% sales.</p>
           </Marquee>
         </div>
         <div className="navbar-main bg-white bg-opacity-85 backdrop-blur-sm section py-6 flex justify-between items-center ">
