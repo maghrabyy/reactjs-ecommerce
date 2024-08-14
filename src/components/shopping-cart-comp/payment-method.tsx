@@ -19,12 +19,14 @@ import { emptyShoppingCart } from '@/store/slices/shoppingCartSlice';
 import { useShoppingCartItems } from '@/store/slices/shoppingCartSlice';
 import { resetOrderInfo } from '@/store/slices/pendingOrderSlice';
 import { useDispatch } from 'react-redux';
+import { useToast } from '../ui/use-toast';
 
 type paymentMethodForm = {
   paymentMethod: string;
 };
 
 export const PaymentMethod = () => {
+  const { toast } = useToast();
   const [openConfirmDialog, setOpenConfirmDialog] = useState(false);
   const { cstInfo, shippingDetails, amountDetail } = usePendingOrderInfo();
   const shoppingCartItems = useShoppingCartItems();
@@ -61,9 +63,14 @@ export const PaymentMethod = () => {
         cstInfo: cstInfo!,
         shippingDetails: shippingDetails!,
         orderStatus: 'pending',
+        orderDate: new Date(),
       }),
     );
-    navigate('/');
+    navigate('/orders');
+    toast({
+      title: 'Order Placed.',
+      description: `An order with an amount of ${amountDetail!.total.toLocaleString()} EGP has been placed.`,
+    });
   };
   return (
     <div className="payment-method space-y-4">

@@ -24,7 +24,7 @@ export enum OrderStatuses {
   refunded,
 }
 
-type OrderItem = {
+export type OrderItem = {
   item: ProdType;
   itemQuantity: number;
   itemSubtotal: number;
@@ -39,4 +39,5 @@ export type OrderType = {
   cstInfo: CstInfoType;
   shippingDetails: ShippingDetailsType;
   orderStatus: keyof typeof OrderStatuses;
+  orderDate: Date;
 };

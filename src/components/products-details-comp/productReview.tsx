@@ -20,24 +20,14 @@ export const ProductReview = ({
   prodRating,
   prodStars,
 }: ProductReviewProps) => {
-  const [title, setTitle] = useState('');
-  const [review, setReview] = useState('');
   const rates = [1, 2, 3, 4, 5];
   const totalStarNum = 5;
 
   return (
     <div className="product-reviews space-y-2 mt-4 md:mt-10">
       <form className="space-y-2">
-        <Input
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          placeholder="Enter your review title."
-        />
-        <Textarea
-          value={review}
-          onChange={(e) => setReview(e.target.value)}
-          placeholder="Enter your review."
-        />
+        <Input placeholder="Enter your review title." />
+        <Textarea placeholder="Enter your review." />
         <div className="submit-review flex gap-2 items-center justify-between">
           <StarRateInput />
           <Button>Submit Review</Button>
