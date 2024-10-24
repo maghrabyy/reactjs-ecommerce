@@ -28,7 +28,7 @@ The eCommerce Music Store is a responsive web platform designed for a music inst
 ![Products Screenshot](screenshots/magh-store-products-page.png)
 ![Categories Screenshot](screenshots/magh-store-categories-page.png)
 ![Product Details Screenshot](screenshots/magh-store-productDetail-page.png)
-![Products Screenshot](screenshots/magh-store-products_page.png)
+![Products Screenshot](screenshots/magh-store-products-page.png)
 ![Shopping Cart Details Screenshot](screenshots/magh-store-shopping-cart-page.png)
 ![Wishlist Screenshot](screenshots/magh-store-wishlist-page.png)
 
